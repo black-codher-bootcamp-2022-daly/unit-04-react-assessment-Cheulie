@@ -15,38 +15,31 @@ export function Product(props) {
       }}
     >
       <ul>
-      <h2>{props.book.volumeInfo?.title}</h2>
-      <p>{props.book.volumeInfo?.description}</p>
+      <h2>{props.artistName}</h2>
+      <h2>{props.collectionName}</h2>
+      <h2>{props.trackName}</h2>
+
+      <p>{props.track.volumeInfo?.description}</p>
       <h2></h2>
-      <img src={props.book.volumeInfo.imageLinks.smallThumbnail}/>
+      <img src={props.artworkUrl100}/>
       </ul>
-      <button onClick={() => props.handleClick(props.id)}>Click to add book</button>
-      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove book</button>
+      <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
+      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button>
 
-      {props.retailPrice && props.retailPrice.amount < 3
-        ? "Great deal"
-        : "Best Seller"}
-    </div>
-  );
-}
 
-Book.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  retailPrice: PropTypes.shape({
-    amount: PropTypes.number,
-  }),
+
+Product.propTypes = {
+  artistName: PropTypes.string,
+  collectionName: PropTypes.string,
+  trackName: PropTypes.string,
+
   handleClick: PropTypes.func,
-  book: PropTypes.shape({
+  track: PropTypes.shape({
     volumeInfo: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      authors: PropTypes.array.isRequired,
-      description: PropTypes.string.isRequired,
+      artistName: PropTypes.string.isRequired,
+      collectionName: PropTypes.array.isRequired,
+      trackName: PropTypes.string.isRequired,
     }),
-    saleInfo: PropTypes.shape({
-      retailPrice: PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-      }),
+   
     }),
-  }),
-};
+  },

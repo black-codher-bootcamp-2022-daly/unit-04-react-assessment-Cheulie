@@ -1,22 +1,21 @@
-import { Book } from './Book';
+import { Product } from './Product';
 import React, { useState } from "react";
 
-export const Bookcase = ({books}) => {
+export const Product = ({track}) => {
 
 
   
-  function addBook () {
-  console.log("hello")
+  function addTrack () {
   };
 
   return (
     <div>
-        <h2>{books.length}</h2>
-        {books.map((book) => book.volumeInfo.title) }
-        {books.map((book) => (              <Book
-                key={book.id}
-                book={book}
-                handleClick={() => addBook(book)}
+        <h2>{tracks.length}</h2>
+        {tracks.map((track) => track.artistName) }
+        {tracks.map((track) => (   trackName          <Track
+                key={track.id}
+                track={track}
+                handleClick={() => addTrack (track)}
 
               />
 )) }
