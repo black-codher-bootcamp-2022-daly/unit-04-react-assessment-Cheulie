@@ -1,4 +1,5 @@
 import './App.css';
+import data from ".models/example-data.jason";
 
 function App() {
   return (
