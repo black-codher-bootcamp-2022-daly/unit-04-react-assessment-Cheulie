@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-
-export function Product(props) {
+function Product (props) {
 
 
   return (
@@ -15,31 +14,35 @@ export function Product(props) {
       }}
     >
       <ul>
-      <h2>{props.artistName}</h2>
-      <h2>{props.collectionName}</h2>
-      <h2>{props.trackName}</h2>
+      <h2>{props.product.artistName}</h2>
+      <h2>{props.product.collectionName}</h2>
+      <h2>{props.product.trackName}</h2>
 
-      <p>{props.track.volumeInfo?.description}</p>
-      <h2></h2>
-      <img src={props.artworkUrl100}/>
+      {/* <p>{props.track.volumeInfo?.description}</p> */}
+  
+      <img src={props.product.artworkUrl100} alt="artwork"/>
+      <p>{props.product.trackPrice}</p>
       </ul>
-      <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
-      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button>
+      {/* <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
+      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button> */}
 
+</div>
+  )
+    };
 
+// Product.propTypes = {
+//   artistName: PropTypes.string,
+//   collectionName: PropTypes.string,
+//   trackName: PropTypes.string,
 
-Product.propTypes = {
-  artistName: PropTypes.string,
-  collectionName: PropTypes.string,
-  trackName: PropTypes.string,
-
-  handleClick: PropTypes.func,
-  track: PropTypes.shape({
-    volumeInfo: PropTypes.shape({
-      artistName: PropTypes.string.isRequired,
-      collectionName: PropTypes.array.isRequired,
-      trackName: PropTypes.string.isRequired,
-    }),
+//   handleClick: PropTypes.func,
+//   track: PropTypes.shape({
+//     volumeInfo: PropTypes.shape({
+//       artistName: PropTypes.string.isRequired,
+//       collectionName: PropTypes.array.isRequired,
+//       trackName: PropTypes.string.isRequired,
+//     }),
    
-    }),
-  },
+//     }),
+//   },
+export default Product;
