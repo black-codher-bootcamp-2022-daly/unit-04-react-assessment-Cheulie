@@ -8,7 +8,7 @@ function Product (props) {
   return (
     <div
       style={{
-        backgroundColor: "yellow",
+        backgroundColor: "green",
         padding: "10px",
         marginBottom: "4px",
       }}
@@ -23,8 +23,8 @@ function Product (props) {
       <img src={props.product.artworkUrl100} alt="artwork"/>
       <p>{props.product.trackPrice}</p>
       </ul>
-      {/* <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
-      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button> */}
+      <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
+      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button>
 
 </div>
   )
