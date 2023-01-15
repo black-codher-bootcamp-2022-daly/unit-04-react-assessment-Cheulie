@@ -1,17 +1,23 @@
 
-import { Link } from "react-router-dom";
+// import  {Link}  from "react-router-dom";
 
+// export const Nav = () => {
 
-export default function Header (props) {
-return <div id="navigation"><h1 className="title">Media store</h1>
-<div>
-    <Link  className="Link" to="/" id="home"> <h4>Home</h4></Link>
-</div>
-<div>
-    <Link className="Link" to="/about" id="about"><h4>About </h4></Link> 
-</div>
-<div>
-    <Link className="Link" to="/basket" id="basket"><h4>Basket:{props.itemCount}</h4></Link> 
-</div>
-</div>
-}
+// function setTitle(title) {
+//     document.title = title
+// }
+
+//   return (
+//     <div className="nav">
+//       <div className="nav_link">
+//         <Link onClick={() => setTitle("HoM3")} to="/">Home</Link>
+//       </div>
+//       <div className="nav_link">
+//         <Link onClick={() => setTitle("SeArCh")} to="/search">Search</Link>
+//       </div>
+//       <div className="nav_link">
+//         <Link onClick={() => setTitle("bookcase")} to="/bookcase">Bookcase</Link>
+//       </div>
+//     </div>
+//   );
+// };

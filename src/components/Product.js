@@ -18,13 +18,17 @@ function Product (props) {
       <h2>{props.product.collectionName}</h2>
       <h2>{props.product.trackName}</h2>
 
-      {/* <p>{props.track.volumeInfo?.description}</p> */}
   
       <img src={props.product.artworkUrl100} alt="artwork"/>
       <p>{props.product.trackPrice}</p>
+      <p>{props.product.currency}</p>
+      <p>{props.product.type}</p>
+      <p>{props.product.longDescription}</p>
+
+
       </ul>
-      <button onClick={() => props.handleClick(props.id)}>Click to add song</button>
-      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove song</button>
+      <button onClick={() => props.handleClick(props.id)}>Click to add track</button>
+      <button onClick={() => props.handleClickRemove(props.id)}>Click to remove track</button>
 
 </div>
   )

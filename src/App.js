@@ -9,7 +9,10 @@ function App() {
   const [product, setProducts] = useState(data);
   return (
 
+    
+
 <div>
+
 <ProductList>
         {product.map((item)=> (<Product
         key={item.trackId}
@@ -19,6 +22,8 @@ function App() {
       
       </ProductList>
 </div>
+
+
   );
 }
 

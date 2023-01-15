@@ -1,28 +1,24 @@
-import { Product } from './Product';
-import React, { useState } from "react";
-import BasketCount from "./BasketCount";
-import BasketTotal from "./BasketTotal";
-
-export const Product = ({track}) => {
 
 
-  
-  function addTrack () {
-  };
+// import React from "react";
+// import Product from "./Product";
+// import BasketCount from "./BasketCount";
+// import BasketTotal from "./BasketTotal";
 
-  return (
-    <div>
-        <h2>{tracks.length}</h2>
-        {tracks.map((track) => track.artistName) }
-        {tracks.map((track) => (   trackName          <Track
-                key={track.id}
-                track={track}
-                handleClick={() => addTrack (track)}
+// const Basket = ({basket,basketTotal,...props}) => {
+//     const count = basket.length;
+//     return (
+//       <div id="basket">
+//           <h1>Basket</h1>
+//           <BasketCount basketCount={count}/>
+//           { 
+//             (count > 0 ? 
+//             basket.map(item => <Product key={item.trackId} item={item} {...props}/>) : 
+//             <div className="empty">No items to see here...</div>)
+//           }
+//           <BasketTotal basketTotal={basketTotal}/>
+//       </div>
+//     );
+//   }
 
-              />
-)) }
-
-
-    </div>
-  );
-};
+// export default Basket;
